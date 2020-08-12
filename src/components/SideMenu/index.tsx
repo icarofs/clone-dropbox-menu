@@ -2,6 +2,12 @@ import React, { useEffect, useState } from "react";
 
 import { Container } from "./styles";
 
+declare global {
+  interface Window {
+    toggleActiveMenu: (() => void) | undefined;
+  }
+}
+
 const scrollThreshold = 300;
 
 const SideMenu: React.FC = ({ children }) => {
@@ -25,6 +31,12 @@ const SideMenu: React.FC = ({ children }) => {
   ];
 
   const className = classes.join(" ").trim();
+
+  function toggleActiveMenu() {
+    setIsActive((prev) => !prev);
+  }
+
+  window.toggleActiveMenu = toggleActiveMenu;
 
   return <Container className={className}>{children}</Container>;
 };
