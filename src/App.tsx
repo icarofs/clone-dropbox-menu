@@ -14,7 +14,7 @@ function App() {
         description={data[0].description}
       />
       <Section
-        variant="beige"
+        variant="bege"
         title={data[1].title}
         description={data[1].description}
       />

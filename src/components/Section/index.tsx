@@ -3,7 +3,7 @@ import React from "react";
 import { Container, Content } from "./styles";
 
 interface Props {
-  variant: "blue" | "beige" | "white" | "black";
+  variant: "blue" | "bege" | "white" | "black";
   title: string;
   description: string;
 }
